@@ -16,7 +16,7 @@ namespace Ejemplo3E
 
         public int edad()
         {
-            //DateTime hoy = DateTime.Now;
+            DateTime hoy = DateTime.Now;
             //calcular la edad
             return (20);
             
