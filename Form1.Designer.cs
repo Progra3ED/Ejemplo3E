@@ -39,14 +39,12 @@
             this.buttonIngresar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.labelDpi = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.labelNombre = new System.Windows.Forms.Label();
-            this.labelApellido = new System.Windows.Forms.Label();
-            this.labelFechaNacimiento = new System.Windows.Forms.Label();
-            this.labelEdad = new System.Windows.Forms.Label();
             this.buttonMostrar = new System.Windows.Forms.Button();
             this.buttonCuentas = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buttonGuardar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -117,7 +115,7 @@
             // 
             this.buttonIngresar.Location = new System.Drawing.Point(182, 486);
             this.buttonIngresar.Name = "buttonIngresar";
-            this.buttonIngresar.Size = new System.Drawing.Size(303, 72);
+            this.buttonIngresar.Size = new System.Drawing.Size(200, 72);
             this.buttonIngresar.TabIndex = 8;
             this.buttonIngresar.Text = "Ingresar Datos";
             this.buttonIngresar.UseVisualStyleBackColor = true;
@@ -137,21 +135,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(896, 59);
+            this.label6.Location = new System.Drawing.Point(722, 59);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 33);
             this.label6.TabIndex = 10;
             this.label6.Text = "Salida";
-            // 
-            // labelDpi
-            // 
-            this.labelDpi.AutoSize = true;
-            this.labelDpi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDpi.Location = new System.Drawing.Point(784, 108);
-            this.labelDpi.Name = "labelDpi";
-            this.labelDpi.Size = new System.Drawing.Size(22, 31);
-            this.labelDpi.TabIndex = 11;
-            this.labelDpi.Text = ".";
             // 
             // label7
             // 
@@ -162,51 +150,11 @@
             this.label7.Size = new System.Drawing.Size(0, 31);
             this.label7.TabIndex = 12;
             // 
-            // labelNombre
-            // 
-            this.labelNombre.AutoSize = true;
-            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.Location = new System.Drawing.Point(784, 190);
-            this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(22, 31);
-            this.labelNombre.TabIndex = 13;
-            this.labelNombre.Text = ".";
-            // 
-            // labelApellido
-            // 
-            this.labelApellido.AutoSize = true;
-            this.labelApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApellido.Location = new System.Drawing.Point(784, 275);
-            this.labelApellido.Name = "labelApellido";
-            this.labelApellido.Size = new System.Drawing.Size(22, 31);
-            this.labelApellido.TabIndex = 14;
-            this.labelApellido.Text = ".";
-            // 
-            // labelFechaNacimiento
-            // 
-            this.labelFechaNacimiento.AutoSize = true;
-            this.labelFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFechaNacimiento.Location = new System.Drawing.Point(784, 344);
-            this.labelFechaNacimiento.Name = "labelFechaNacimiento";
-            this.labelFechaNacimiento.Size = new System.Drawing.Size(22, 31);
-            this.labelFechaNacimiento.TabIndex = 15;
-            this.labelFechaNacimiento.Text = ".";
-            // 
-            // labelEdad
-            // 
-            this.labelEdad.AutoSize = true;
-            this.labelEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEdad.Location = new System.Drawing.Point(784, 404);
-            this.labelEdad.Name = "labelEdad";
-            this.labelEdad.Size = new System.Drawing.Size(22, 31);
-            this.labelEdad.TabIndex = 16;
-            this.labelEdad.Text = ".";
-            // 
             // buttonMostrar
             // 
-            this.buttonMostrar.Location = new System.Drawing.Point(710, 486);
+            this.buttonMostrar.Location = new System.Drawing.Point(453, 486);
             this.buttonMostrar.Name = "buttonMostrar";
-            this.buttonMostrar.Size = new System.Drawing.Size(217, 72);
+            this.buttonMostrar.Size = new System.Drawing.Size(186, 72);
             this.buttonMostrar.TabIndex = 17;
             this.buttonMostrar.Text = "Mostrar los Datos";
             this.buttonMostrar.UseVisualStyleBackColor = true;
@@ -214,7 +162,7 @@
             // 
             // buttonCuentas
             // 
-            this.buttonCuentas.Location = new System.Drawing.Point(1010, 486);
+            this.buttonCuentas.Location = new System.Drawing.Point(914, 493);
             this.buttonCuentas.Name = "buttonCuentas";
             this.buttonCuentas.Size = new System.Drawing.Size(161, 65);
             this.buttonCuentas.TabIndex = 18;
@@ -222,19 +170,34 @@
             this.buttonCuentas.UseVisualStyleBackColor = true;
             this.buttonCuentas.Click += new System.EventHandler(this.buttonCuentas_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(584, 123);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(491, 310);
+            this.dataGridView1.TabIndex = 19;
+            // 
+            // buttonGuardar
+            // 
+            this.buttonGuardar.Location = new System.Drawing.Point(693, 486);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(177, 72);
+            this.buttonGuardar.TabIndex = 20;
+            this.buttonGuardar.Text = "Guardar Datos";
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1220, 606);
+            this.Controls.Add(this.buttonGuardar);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonCuentas);
             this.Controls.Add(this.buttonMostrar);
-            this.Controls.Add(this.labelEdad);
-            this.Controls.Add(this.labelFechaNacimiento);
-            this.Controls.Add(this.labelApellido);
-            this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.labelDpi);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonIngresar);
@@ -248,6 +211,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,14 +230,11 @@
         private System.Windows.Forms.Button buttonIngresar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label labelDpi;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label labelNombre;
-        private System.Windows.Forms.Label labelApellido;
-        private System.Windows.Forms.Label labelFechaNacimiento;
-        private System.Windows.Forms.Label labelEdad;
         private System.Windows.Forms.Button buttonMostrar;
         private System.Windows.Forms.Button buttonCuentas;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonGuardar;
     }
 }
 
