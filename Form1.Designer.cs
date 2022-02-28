@@ -44,6 +44,7 @@
             this.buttonCuentas = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonGuardar = new System.Windows.Forms.Button();
+            this.buttonCargar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +114,7 @@
             // 
             // buttonIngresar
             // 
-            this.buttonIngresar.Location = new System.Drawing.Point(182, 486);
+            this.buttonIngresar.Location = new System.Drawing.Point(105, 479);
             this.buttonIngresar.Name = "buttonIngresar";
             this.buttonIngresar.Size = new System.Drawing.Size(200, 72);
             this.buttonIngresar.TabIndex = 8;
@@ -152,7 +153,7 @@
             // 
             // buttonMostrar
             // 
-            this.buttonMostrar.Location = new System.Drawing.Point(453, 486);
+            this.buttonMostrar.Location = new System.Drawing.Point(358, 479);
             this.buttonMostrar.Name = "buttonMostrar";
             this.buttonMostrar.Size = new System.Drawing.Size(186, 72);
             this.buttonMostrar.TabIndex = 17;
@@ -162,7 +163,7 @@
             // 
             // buttonCuentas
             // 
-            this.buttonCuentas.Location = new System.Drawing.Point(914, 493);
+            this.buttonCuentas.Location = new System.Drawing.Point(1020, 486);
             this.buttonCuentas.Name = "buttonCuentas";
             this.buttonCuentas.Size = new System.Drawing.Size(161, 65);
             this.buttonCuentas.TabIndex = 18;
@@ -180,7 +181,7 @@
             // 
             // buttonGuardar
             // 
-            this.buttonGuardar.Location = new System.Drawing.Point(693, 486);
+            this.buttonGuardar.Location = new System.Drawing.Point(597, 479);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(177, 72);
             this.buttonGuardar.TabIndex = 20;
@@ -188,11 +189,22 @@
             this.buttonGuardar.UseVisualStyleBackColor = true;
             this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
+            // buttonCargar
+            // 
+            this.buttonCargar.Location = new System.Drawing.Point(803, 479);
+            this.buttonCargar.Name = "buttonCargar";
+            this.buttonCargar.Size = new System.Drawing.Size(161, 72);
+            this.buttonCargar.TabIndex = 21;
+            this.buttonCargar.Text = "Cargar Datos";
+            this.buttonCargar.UseVisualStyleBackColor = true;
+            this.buttonCargar.Click += new System.EventHandler(this.buttonCargar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1220, 606);
+            this.Controls.Add(this.buttonCargar);
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonCuentas);
@@ -235,6 +247,7 @@
         private System.Windows.Forms.Button buttonCuentas;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonGuardar;
+        private System.Windows.Forms.Button buttonCargar;
     }
 }
 

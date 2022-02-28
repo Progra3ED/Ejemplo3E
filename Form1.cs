@@ -61,6 +61,7 @@ namespace Ejemplo3E
             
             FileStream stream = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.Write);            
             StreamWriter writer = new StreamWriter(stream);
+            
 
             foreach (var persona in personas)
             {
@@ -76,6 +77,32 @@ namespace Ejemplo3E
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
             Guardar("Persona.txt");
+        }
+
+        private void Leer(string fileName)
+        {
+            FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            StreamReader reader = new StreamReader(stream);
+
+            
+            while (reader.Peek() > -1)
+            {
+                Persona persona = new Persona();
+                persona.Dpi = reader.ReadLine();
+                persona.Nombre = reader.ReadLine();
+                persona.Apellido = reader.ReadLine();
+                persona.FechaNacimiento = Convert.ToDateTime(reader.ReadLine());
+
+                personas.Add(persona);
+            }
+
+            reader.Close();
+
+
+        }
+        private void buttonCargar_Click(object sender, EventArgs e)
+        {
+            Leer("Persona.txt");
         }
     }
 }
